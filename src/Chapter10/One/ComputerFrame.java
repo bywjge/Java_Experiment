@@ -1,9 +1,7 @@
-package Chapter10;
+package Chapter10.One;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class ComputerFrame extends JFrame {
     JMenuBar menubar;

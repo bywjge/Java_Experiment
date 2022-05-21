@@ -1,4 +1,4 @@
-package Chapter10;
+package Chapter10.One;
 
 import java.awt.event.*;
 import java.util.Random;
