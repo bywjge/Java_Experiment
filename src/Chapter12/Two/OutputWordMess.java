@@ -42,6 +42,7 @@ public class OutputWordMess {
         }
 
         // 实验后的练习
+        System.out.println();
         System.out.println("按字典序输出全部不相同的单词：");
         noSameWord.sort(new Comparator<String>() {
             @Override
