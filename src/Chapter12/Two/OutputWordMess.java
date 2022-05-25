@@ -41,19 +41,18 @@ public class OutputWordMess {
             System.out.printf("%s:%-7.3f",noSameWord.elementAt(m),frequency);
         }
 
+        // 实验后的练习
         System.out.println("按字典序输出全部不相同的单词：");
-        System.out.println(noSameWord);
-        Collections.sort(noSameWord, new Comparator<String>() {
+        noSameWord.sort(new Comparator<>() {
             @Override
             public int compare(String o1, String o2) {
                 return Collator.getInstance(Locale.ENGLISH).compare(o1.toLowerCase(), o2.toLowerCase());
             }
         });
-        System.out.println(noSameWord);
-//        allWord.sort();
-//        String[] res = allWord.toArray(new String[allWord.size()]);
-//        Arrays.sort(res);
-//        System.out.println(res[0]);
+        for (String i: noSameWord){
+            System.out.println(i);
+        }
+
 
     }
 
