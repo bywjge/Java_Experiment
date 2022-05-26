@@ -4,7 +4,7 @@ import java.io.*;
 import java.net.URISyntaxException;
 import java.util.Objects;
 
-public class PassWord {
+public class MorePractice {
     public static void main(String[] args) throws URISyntaxException {
         boolean success=false;
         int count=0;
@@ -16,9 +16,9 @@ public class PassWord {
             passwd=cons.readPassword();
             count++;
             String password=new String(passwd);
-            if (password.equals("tiger123")) {
+            if (password.equals("hello")) {
                 success=true;
-                System.out.println("您第"+count+"次输入的密码正确!");
+                System.out.println("你好，欢迎你!");
                 break;
             }
             else {
@@ -29,20 +29,5 @@ public class PassWord {
                 System.exit(0);
             }
         }
-        if(success) {
-            File file=new File(Objects.requireNonNull(PassWord.class.getResource("score.txt")).toURI());
-            try {
-                FileReader inOne=new FileReader(file);
-                BufferedReader inTwo= new BufferedReader(inOne);
-                String s=null;
-                while((s=inTwo.readLine())!=null) {
-                    System.out.println(s);
-                }
-                inOne.close();
-                inTwo.close();
-            }
-            catch(IOException ignored){}
-        }
     }
-
 }
